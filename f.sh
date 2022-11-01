@@ -96,7 +96,7 @@ echo -e "用户名：admin  密码：admin"
 echo -e "默认 bind_port：7000"
 echo -e "默认 token：12345678"
 echo ""
-echo -e "默认 vhost_http_port：80"
+echo -e "默认 vhost_http_port：8081"
 echo -e "默认 vhost_https_port：443"
 echo ""
 echo -e "默认 bind_udp_port：7001"
@@ -297,24 +297,24 @@ set_subdomain_host(){
 
 # 关闭apache2 释放80端口
 set_unapache2(){
-	systemctl disable httpd >/dev/null 2>&1
-	systemctl stop httpd >/dev/null 2>&1
-	killall -9 httpd >/dev/null 2>&1
-
-	systemctl disable apache2 >/dev/null 2>&1
-	systemctl stop apache2 >/dev/null 2>&1
-	killall -9 apache2 >/dev/null 2>&1
-
-	systemctl disable firewalld >/dev/null 2>&1
-	systemctl stop firewalld >/dev/null 2>&1
-	killall -9 firewalld >/dev/null 2>&1
-
-	systemctl disable iptables >/dev/null 2>&1
-	systemctl stop iptables >/dev/null 2>&1
-	killall -9 iptables >/dev/null 2>&1
-
-	echo -e "关闭 apache2 成功！"
-	echo -e "关闭 防火墙 成功！"
+	#systemctl disable httpd >/dev/null 2>&1
+	#systemctl stop httpd >/dev/null 2>&1
+	#killall -9 httpd >/dev/null 2>&1
+#
+	#systemctl disable apache2 >/dev/null 2>&1
+	#systemctl stop apache2 >/dev/null 2>&1
+	#killall -9 apache2 >/dev/null 2>&1
+#
+	#systemctl disable firewalld >/dev/null 2>&1
+	#systemctl stop firewalld >/dev/null 2>&1
+	#killall -9 firewalld >/dev/null 2>&1
+#
+	#systemctl disable iptables >/dev/null 2>&1
+	#systemctl stop iptables >/dev/null 2>&1
+	#killall -9 iptables >/dev/null 2>&1
+#
+	#echo -e "关闭 apache2 成功！"
+	#echo -e "关闭 防火墙 成功！"
 }
 
 
